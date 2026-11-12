@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сергей Кашперов — звукорежиссёр</title>
+<meta name="description" content="Резюме звукорежиссёра Сергея Кашперова: запись, сведение, мастеринг, звук для мероприятий.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="Сергей Кашперов — звукорежиссёр">
+<meta property="og:description" content="Запись, сведение, мастеринг и звук для мероприятий. Фото с мероприятий.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23000'/%3E%3Crect x='7' y='15' width='3' height='10' rx='1.5' fill='%23ff9f0a'/%3E%3Crect x='13' y='9' width='3' height='16' rx='1.5' fill='%23ff9f0a'/%3E%3Crect x='19' y='12' width='3' height='13' rx='1.5' fill='%23ff9f0a'/%3E%3Crect x='25' y='17' width='2' height='8' rx='1' fill='%23ff9f0a' opacity='.6'/%3E%3C/svg%3E">
+<script>
+  document.documentElement.classList.add('js');
+  (function () {
+    setTimeout(function () {
+      var loader = document.getElementById('loader');
+      if (loader && !loader.classList.contains('done')) {
+        loader.classList.add('done');
+        document.documentElement.classList.add('ready');
+        document.body.style.overflow = '';
+        setTimeout(function(){ loader.style.display = 'none'; }, 1000);
+      }
+      document.querySelectorAll('.reveal, .skill').forEach(function (el) { el.classList.add('in'); });
+    }, 4000);
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20261109-11">
+</head>
+<body>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-brand">
+    <span class="brand-bars"><i></i><i></i><i></i><i></i></span>
+    <span>Кашперов</span>
+  </div>
+  <div class="loader-count" id="loaderCount">00</div>
+  <div class="loader-bar"><span id="loaderBar"></span></div>
+</div>
+
+<div class="cursor" id="cursor" aria-hidden="true">
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+</div>
+
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Наверх">
+    <span class="brand-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span class="brand-name">Кашперов</span>
+  </a>
+  <nav class="nav-links" aria-label="Разделы">
+    <a href="#about" data-nav="about">Обо мне</a>
+    <a href="#numbers" data-nav="numbers">Цифры</a>
+    <a href="#gallery" data-nav="gallery">Фото</a>
+    <a href="#skills" data-nav="skills">Навыки</a>
+    <a href="#path" data-nav="path">Путь</a>
+    <a href="#works" data-nav="works">Работы</a>
+    <a href="#contact" data-nav="contact">Контакты</a>
+  </nav>
+  <a class="btn btn-primary btn-small" href="#contact">Связаться</a>
+</header>
+
+<div class="meter" id="meter" aria-hidden="true"></div>
+
+<main id="main">
+
+  <section class="hero" id="top" data-viz="hero">
+    <canvas id="heroCanvas" aria-hidden="true"></canvas>
+ <div class="wrap hero-inner">
+  <button class="hero-music hero-fade" style="--d:.1s" type="button" id="musicBtn"
+          aria-label="Включить музыку" aria-pressed="false">
+    <span class="music-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span class="music-meta">
+      <span class="music-title">Stronger</span>
+      <span class="music-artist">Kanye West</span>
+    </span>
+    <span class="music-play-icon" aria-hidden="true">
+      <svg class="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+      <svg class="i-pause" viewBox="0 0 24 24">
+        <rect x="6" y="5" width="4" height="14" rx="1" fill="currentColor"/>
+        <rect x="14" y="5" width="4" height="14" rx="1" fill="currentColor"/>
+      </svg>
+    </span>
+  </button>
+
+  <h1 class="hero-name" aria-label="Сергей Кашперов">
+    <span class="line" data-split data-offset="0">Сергей</span>
+    <span class="line" data-split data-offset="6">Кашперов</span>
+  </h1>
+  <p class="hero-role hero-fade" style="--d:.9s">Звукорежиссёр</p>
+  <p class="hero-lede hero-fade" style="--d:1.05s">Записываю, свожу и настраиваю звук так, чтобы слушатель замечал музыку и слова, а не технику.</p>
+  <div class="hero-actions hero-fade" style="--d:1.2s">
+    <a class="btn btn-primary" href="#gallery">Смотреть фото</a>
+    <a class="btn" href="#works">Смотреть работы</a>
+  </div>
+</div>
+<audio id="bgMusic" preload="none" loop src="audio/stronger.mp3"></audio>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Запись</span><i>●</i><span>Сведение</span><i>●</i><span>Мастеринг</span><i>●</i><span>Звук на мероприятиях</span><i>●</i><span>Саунд-дизайн</span><i>●</i>
+      <span>Запись</span><i>●</i><span>Сведение</span><i>●</i><span>Мастеринг</span><i>●</i><span>Звук на мероприятиях</span><i>●</i><span>Саунд-дизайн</span><i>●</i>
+    </div>
+  </div>
+
+  <!-- ============ ОБО МНЕ + АУДИО ============ -->
+  <section class="section about" id="about" data-section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Обо мне</h2>
+      </div>
+
+      <p class="about-lede reveal">
+        с первого курса колледжа я работаю со звуком на мероприятиях — от концертов с живой музыкой до театральных постановок с подвешиванием микрофонов. С тех пор как выпустился, меня продолжают звать помогать с самыми разными событиями — от небольших частных вечеров до крупных сцен. Мне важно, чтобы зритель слышал музыку и слова, а не замечал технику. Работаю с цифровыми пультами, студийными микрофонами и акустикой зала — от настройки до сведения в реальном времени.
+      </p>
+
+  
+    </div>
+  </section>
+
+  <!-- ============ ЦИФРЫ ПО ГОДАМ ============ -->
+  <section class="section numbers" id="numbers" data-section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Мои мероприятия</h2>
+        <p>В роли звукорежиссёра</p>
+      </div>
+
+      <div class="total reveal" data-total="0">
+        <div class="total-value">
+          <span class="total-num" id="totalNum">0</span>
+          <span class="total-label">мероприятий<br>с 2021 года</span>
+        </div>
+      </div>
+
+      <div class="years-grid" id="yearsGrid">
+        <div class="year-card reveal" data-year="2021" data-events="18">
+          <p class="year-label">2021</p>
+          <p class="year-value"><span class="year-num">0</span></p>
+          <div class="year-bar"><span class="year-bar-fill"></span></div>
+        </div>
+        <div class="year-card reveal" data-year="2022" data-events="26">
+          <p class="year-label">2022</p>
+          <p class="year-value"><span class="year-num">0</span></p>
+          <div class="year-bar"><span class="year-bar-fill"></span></div>
+        </div>
+        <div class="year-card reveal" data-year="2023" data-events="32">
+          <p class="year-label">2023</p>
+          <p class="year-value"><span class="year-num">0</span></p>
+          <div class="year-bar"><span class="year-bar-fill"></span></div>
+        </div>
+        <div class="year-card reveal" data-year="2024" data-events="38">
+          <p class="year-label">2024</p>
+          <p class="year-value"><span class="year-num">0</span></p>
+          <div class="year-bar"><span class="year-bar-fill"></span></div>
+        </div>
+        <div class="year-card reveal" data-year="2025" data-events="44">
+          <p class="year-label">2025</p>
+          <p class="year-value"><span class="year-num">0</span></p>
+          <div class="year-bar"><span class="year-bar-fill"></span></div>
+        </div>
+        <div class="year-card reveal" data-year="2026" data-events="12">
+          <p class="year-label">2026</p>
+          <p class="year-value"><span class="year-num">0</span></p>
+          <div class="year-bar"><span class="year-bar-fill"></span></div>
+        </div>
+      </div>
+
+      <div class="gear reveal">
+        <h3>На какой аппаратуре работаю</h3>
+        <ul class="gear-list">
+          <li><details class="gear-details"><summary>
+            <div class="gear-photo" data-fallback="BEHRINGER x32">
+              <img src="photo/behrenger.png" alt="Микшер BEHRINGER x32" loading="lazy" decoding="async"
+                   onerror="this.classList.add('is-missing')">
+            </div>
+            <div class="gear-text">
+              <span class="gear-brand">BEHRINGER x32</span>
+              <span class="gear-desc">Микшер</span>
+            </div>
+          <span class="gear-hint">Характеристики и опыт <span aria-hidden="true">＋</span></span></summary><div class="gear-info"><p class="gear-spec">40 входных каналов · 25 шин · 32 предусилителя MIDAS</p><p>Цифровой пульт для многоканального концертного звука.</p><h4>Ценность для команды</h4><p>Опыт с X32 важен для работы с несколькими источниками одновременно: голосами, инструментами и воспроизведением. Это основа подготовки каналов, построения маршрутизации и управления звуком во время живой программы.</p></div></details></li>
+          <li><details class="gear-details"><summary>
+            <div class="gear-photo" data-fallback="Allen &amp; Heath">
+              <img src="photo/alen.jpg" alt="Allen &amp; Heath SQ-6, dLive" loading="lazy" decoding="async"
+                   onerror="this.classList.add('is-missing')">
+            </div>
+            <div class="gear-text">
+              <span class="gear-brand">Allen &amp; Heath</span>
+              <span class="gear-desc">SQ-6, dLive</span>
+            </div>
+         
+           
+          <span class="gear-hint">Характеристики и опыт <span aria-hidden="true">＋</span></span></summary><div class="gear-info"><p class="gear-spec">SQ-6: 48 каналов обработки · 96 кГц</p><p>SQ-6 и dLive — системы для концертного и событийного звука.</p><h4>Ценность для команды</h4><p>Знакомство с разными цифровыми пультами помогает быстрее включаться в работу на новой площадке. Для команды это ценно при подготовке сложных программ, где нужно понимать путь сигнала и уверенно работать с несколькими миксами.</p></div></details></li>
+          <li><details class="gear-details"><summary>
+            <div class="gear-photo" data-fallback="Shure">
+              <img src="photo/micro.jpeg" alt="Shure SM58, Beta 58, SM7B" loading="lazy" decoding="async"
+                   onerror="this.classList.add('is-missing')">
+            </div>
+            <div class="gear-text">
+              <span class="gear-brand">Shure</span>
+              <span class="gear-desc">SM58, Beta 58, SM7B</span>
+            </div>
+          <span class="gear-hint">Характеристики и опыт <span aria-hidden="true">＋</span></span></summary><div class="gear-info"><p class="gear-spec">SM58 · Beta 58 · SM7B</p><p>Микрофоны для вокала и речи на сцене и в студии.</p><h4>Ценность для команды</h4><p>Работа с микрофонами начинается с выбора под голос и задачу. Понимание размещения и настройки уровня помогает получать разборчивую речь и вокал, контролировать посторонний звук и снижать риск обратной связи на сцене.</p></div></details></li>
+          <li><details class="gear-details"><summary>
+            <div class="gear-photo" data-fallback="FL Studio">
+              <img src="photo/fl.jpg" alt="FL Studio" loading="lazy" decoding="async"
+                   onerror="this.classList.add('is-missing')">
+            </div>
+            <div class="gear-text">
+              <span class="gear-brand">FL Studio</span>
+              <span class="gear-desc">2021-2025</span>
+            </div>
+          <span class="gear-hint">Характеристики и опыт <span aria-hidden="true">＋</span></span></summary><div class="gear-info"><p class="gear-spec">Запись аудио · микшер · эффекты · автоматизация</p><p>FL Studio — среда для создания и обработки музыки.</p><h4>Ценность для команды</h4><p>Опыт в музыкальном софте дополняет работу на площадке: позволяет готовить аудиоматериалы, редактировать записи и выстраивать баланс дорожек. Это полезно для задач, которые продолжаются до и после самого мероприятия.</p></div></details></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ФОТО ============ -->
+  <section class="section gallery" id="gallery" data-section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>С мероприятий</h2>
+      
+      </div>
+
+      <div class="gallery-grid">
+        <button class="gallery-item reveal" data-src="photo/1.jpg">
+          <img src="photo/1.jpg" alt="Пульт на концертной площадке" loading="lazy" decoding="async">
+        </button>
+        <button class="gallery-item reveal" type="button" data-src="photo/2.jpg" aria-label="Открыть фото 2">
+          <img src="photo/2.jpg" alt="Микрофон на сцене" loading="lazy" decoding="async">
+        <button class="gallery-item reveal" type="button" data-src="photo/3.jpg" aria-label="Открыть фото 3">
+          <img src="photo/3.jpg" alt="Зал с оборудованием" loading="lazy" decoding="async">
+        </button>
+        <button class="gallery-item reveal" type="button" data-src="photo/4.jpg" aria-label="Открыть фото 4">
+          <img src="photo/4.jpg" alt="Звукорежиссёр за пультом" loading="lazy" decoding="async">
+        </button>
+        <button class="gallery-item reveal" type="button" data-src="photo/5.jpg" aria-label="Открыть фото 5">
+          <img src="photo/5.jpg" alt="Микшерный пульт крупным планом" loading="lazy" decoding="async">
+        </button>
+        <button class="gallery-item reveal" type="button" data-src="photo/6.jpg" aria-label="Открыть фото 6">
+          <img src="photo/6.jpg" alt="Акустическая система на сцене" loading="lazy" decoding="async">
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section skills" id="skills" data-section>
+    <div class="wrap skills-grid">
+      <div>
+        <div class="section-head reveal">
+          <h2>Что я умею</h2>
+        </div>
+        <ul class="skill-list">
+          <li class="skill" data-level="85"><span class="skill-name">Сведение</span><div class="seg" aria-hidden="true"></div></li>
+          <li class="skill" data-level="80"><span class="skill-name">Запись вокала и инструментов</span><div class="seg" aria-hidden="true"></div></li>
+          <li class="skill" data-level="78"><span class="skill-name">Звук на концертах и мероприятиях</span><div class="seg" aria-hidden="true"></div></li>
+          <li class="skill" data-level="72"><span class="skill-name">Монтаж речи и саунд-дизайн</span><div class="seg" aria-hidden="true"></div></li>
+          <li class="skill" data-level="68"><span class="skill-name">Мастеринг</span><div class="seg" aria-hidden="true"></div></li>
+          <li class="skill" data-level="82"><span class="skill-name">Настройка и диагностика оборудования</span><div class="seg" aria-hidden="true"></div></li>
+        </ul>
+      </div>
+
+      <aside class="skills-side reveal">
+        <h3>Звук и программирование</h3>
+        <p>Получил образование по специальности «Информационные системы и программирование». Понимаю, как устроены цифровой сигнал, файлы, сети и софт, быстро осваиваю новую технику и автоматизирую рутину.</p>
+        <h3 class="chips-title">Инструменты</h3>
+        <ul class="chips">
+          <li><button class="tool-chip" type="button" data-tool="0" aria-pressed="false" aria-controls="toolSummary">Pro Tools</button></li>
+          <li><button class="tool-chip" type="button" data-tool="1" aria-pressed="false" aria-controls="toolSummary">Ableton Live</button></li>
+          <li><button class="tool-chip" type="button" data-tool="2" aria-pressed="false" aria-controls="toolSummary">Reaper</button></li>
+          <li><button class="tool-chip" type="button" data-tool="3" aria-pressed="false" aria-controls="toolSummary">Цифровые микшеры</button></li>
+          <li><button class="tool-chip" type="button" data-tool="4" aria-pressed="false" aria-controls="toolSummary">Студийные микрофоны</button></li>
+          <li><button class="tool-chip" type="button" data-tool="5" aria-pressed="false" aria-controls="toolSummary">Акустическая подготовка зала</button></li>
+        </ul>
+        <div class="tool-summary" id="toolSummary" role="status" aria-live="polite" hidden><h4></h4><p></p></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section path" id="path" data-section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Где я учился и работал</h2>
+        <p>Путь сигнала от первого опыта к сегодняшним задачам.</p>
+      </div>
+
+      <div class="chain" id="chain">
+        <span class="chain-fill" aria-hidden="true"></span>
+
+           <article class="node">
+          <p class="when">2021-2025</p>
+          <h3>Технологический колледж № 34, Москва</h3>
+          <p>Во время обучения по специальности «Информационные системы и программирование» отвечал за звук на внутренних мероприятиях колледжа. Здесь начался мой опыт работы звукорежиссёром на концертах и театральных постановках.</p>
+        </article>
+
+ <article class="node">
+          <p class="when">2023 — 2025</p>
+          <h3>Движение первых</h3>
+          <p>Работал звукорежиссёром на федеральных проектах «Движения первых». Отвечал за техническое сопровождение мероприятий и звуковое обеспечение программы.</p>
+        </article>
+
+
+
+      
+        <article class="node">
+          <p class="when">Сейчас</p>
+          <h3>Технологический колледж № 34, Москва</h3>
+          <p>После выпуска продолжаю сотрудничать с колледжем: меня приглашают сопровождать мероприятия в роли звукорежиссёра. Отвечаю за подготовку звукового оборудования и звук во время программы.</p>
+        </article>
+
+       
+       
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ РАБОТЫ ============ -->
+  <section class="section works" id="works" data-section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Работы</h2>
+        <p>Эти проекты лучше слушать, чем описывать. Наведите курсор на карточку, чтобы увидеть, как идёт трек.</p>
+      </div>
+
+      
+      <!-- Блок про группу -->
+      <div class="band-note reveal">
+        <div class="band-note-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M9 18V5l10-2v13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="16" cy="16" r="3" stroke="currentColor" stroke-width="1.8"/>
+          </svg>
+        </div>
+        <div class="band-note-body">
+          <p class="band-note-text">
+            Эти треки — моя совместная работа с друзьями. Мы вместе играем в группе <strong>[Эрос`]</strong> и выпускаем песни на стриминговых площадках.
+          </p>
+          <ul class="band-links">
+            <li>
+              <a href="https://music.yandex.ru/artist/26113964" target="_blank" rel="noopener" aria-label="Слушать в Яндекс Музыке">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-2.4 4.7h1.1c1.42 0 2.1.7 2.1 1.94 0 1.02-.5 1.62-1.28 2.07l2.31 3.9h-1.55l-2.1-3.62h-.37v3.62H9.6V6.7zm1.11 1.1v2.18h.43c.82 0 1.2-.37 1.2-1.1 0-.73-.38-1.08-1.2-1.08h-.43z"/></svg>
+                Яндекс
+              </a>
+            </li>
+            <li>
+              <a href="https://vk.ru/artist/5325406249045831829" target="_blank" rel="noopener" aria-label="Слушать в VK Музыке">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.1 17.6c-5.1 0-8.4-3.5-8.5-9.4h2.7c.1 4.3 2.1 6.1 3.7 6.5V8.2h2.5v3.8c1.5-.2 3.1-1.9 3.6-3.8h2.5c-.4 2.3-2 4-3.2 4.7 1.2.5 3 2.1 3.7 4.7h-2.8c-.5-1.7-1.9-3-3.3-3.2v3.2h-.9z"/></svg>
+                VK Музыка
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <br>
+          <div class="showreels">
+        <div class="showreel reveal" data-track="1">
+          <button class="showreel-play" type="button" aria-label="Воспроизвести" aria-pressed="false">
+            <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+            <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1" fill="currentColor"/><rect x="14" y="5" width="4" height="14" rx="1" fill="currentColor"/></svg>
+          </button>
+          <div class="showreel-body">
+            <div class="showreel-meta">
+              <p class="showreel-title">Эрос · Дура</p>
+              <p class="showreel-time">0:00 / 0:00</p>
+            </div>
+            <div class="showreel-bar" role="slider" aria-label="Позиция воспроизведения" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+              <span class="showreel-progress"></span>
+            </div>
+          </div>
+          <div class="showreel-volume">
+            <button class="volume-btn" type="button" aria-label="Выключить звук" aria-pressed="false">
+              <svg class="i-vol-on" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/>
+                <path d="M16 8.5c1 1 1.5 2.2 1.5 3.5s-.5 2.5-1.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M18.5 6c1.7 1.6 2.5 3.7 2.5 6s-.8 4.4-2.5 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".55"/>
+              </svg>
+              <svg class="i-vol-off" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/>
+                <path d="M16 9l5 5m0-5l-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <input class="volume-range" type="range" min="0" max="1" step="0.01" value="1" aria-label="Громкость">
+          </div>
+          <audio preload="metadata" src="audio/dura.mp3"></audio>
+        </div>
+
+        <div class="showreel reveal" data-track="2">
+          <button class="showreel-play" type="button" aria-label="Воспроизвести" aria-pressed="false">
+            <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+            <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1" fill="currentColor"/><rect x="14" y="5" width="4" height="14" rx="1" fill="currentColor"/></svg>
+          </button>
+          <div class="showreel-body">
+            <div class="showreel-meta">
+              <p class="showreel-title">Эрос Пришлец</p>
+              <p class="showreel-time">0:00 / 0:00</p>
+            </div>
+            <div class="showreel-bar" role="slider" aria-label="Позиция воспроизведения" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+              <span class="showreel-progress"></span>
+            </div>
+          </div>
+          <div class="showreel-volume">
+            <button class="volume-btn" type="button" aria-label="Выключить звук" aria-pressed="false">
+              <svg class="i-vol-on" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/>
+                <path d="M16 8.5c1 1 1.5 2.2 1.5 3.5s-.5 2.5-1.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M18.5 6c1.7 1.6 2.5 3.7 2.5 6s-.8 4.4-2.5 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".55"/>
+              </svg>
+              <svg class="i-vol-off" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/>
+                <path d="M16 9l5 5m0-5l-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <input class="volume-range" type="range" min="0" max="1" step="0.01" value="1" aria-label="Громкость">
+          </div>
+          <audio preload="metadata" src="audio/pri.mp3"></audio>
+        </div>
+
+        <div class="showreel reveal" data-track="3">
+          <button class="showreel-play" type="button" aria-label="Воспроизвести" aria-pressed="false">
+            <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+            <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1" fill="currentColor"/><rect x="14" y="5" width="4" height="14" rx="1" fill="currentColor"/></svg>
+          </button>
+          <div class="showreel-body">
+            <div class="showreel-meta">
+              <p class="showreel-title">Эрос · Я и ты</p>
+              <p class="showreel-time">0:00 / 0:00</p>
+            </div>
+            <div class="showreel-bar" role="slider" aria-label="Позиция воспроизведения" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+              <span class="showreel-progress"></span>
+            </div>
+          </div>
+          <div class="showreel-volume">
+            <button class="volume-btn" type="button" aria-label="Выключить звук" aria-pressed="false">
+              <svg class="i-vol-on" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/>
+                <path d="M16 8.5c1 1 1.5 2.2 1.5 3.5s-.5 2.5-1.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M18.5 6c1.7 1.6 2.5 3.7 2.5 6s-.8 4.4-2.5 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".55"/>
+              </svg>
+              <svg class="i-vol-off" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/>
+                <path d="M16 9l5 5m0-5l-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <input class="volume-range" type="range" min="0" max="1" step="0.01" value="1" aria-label="Громкость">
+          </div>
+          <audio preload="metadata" src="audio/ti.mp3"></audio>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact" data-section>
+    <div class="wrap">
+      <div class="contact-card reveal">
+        <div class="contact-text">
+          <h2>Расскажите, какой звук вам нужен</h2>
+          <p>Напишите или позвоните, и мы обсудим задачу. Москва, готов к очной работе.</p>
+        </div>
+        <ul class="contact-list">
+          <li><span class="k">Почта</span><a href="mailto:kashperovsergei@gmail.com">kashperovsergei@gmail.com</a><button class="copy" type="button" data-copy="kashperovsergei@gmail.com">Копировать</button></li>
+          <li><span class="k">Telegram</span><a href="https://t.me/Acter1703" target="_blank" rel="noopener">@Acter1703</a><button class="copy" type="button" data-copy="@Acter1703">Копировать</button></li>
+          <li><span class="k">Телефон</span><a href="tel:+79854885878">+7 985 488 58 78</a><button class="copy" type="button" data-copy="+7 985 488 58 78">Копировать</button></li>
+        </ul>
+      </div>
+      
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <p>© <span id="year">2026</span> Сергей Кашперов</p>
+    <a href="#top">Наверх ↑</a>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="spotlight" id="spotlight" aria-hidden="true"></div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фото" hidden>
+  <button class="lightbox-close" type="button" id="lbClose" aria-label="Закрыть">✕</button>
+  <button class="lightbox-prev" type="button" id="lbPrev" aria-label="Предыдущее фото">‹</button>
+  <button class="lightbox-next" type="button" id="lbNext" aria-label="Следующее фото">›</button>
+  <figure class="lightbox-figure">
+    <img id="lbImg" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+  <p class="lightbox-count" id="lbCount"></p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="script.js?v=20261109-11"></script>
+<script src="stronger-beats.js?v=1"></script>
+<script src="hero-bg.js?v=20261109-8"></script>
+</body>
+</html>
