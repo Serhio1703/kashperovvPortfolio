@@ -1,0 +1,12 @@
+# Системные файлы Windows
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# macOS
+.DS_Store
+
+# Резервные копии и временные файлы
+*.bak
+*~
+*.tmp
