@@ -71,7 +71,10 @@
 <main id="main">
 
   <section class="hero" id="top" data-viz="hero">
-    <canvas id="heroCanvas" aria-hidden="true"></canvas>
+    <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto"
+           aria-hidden="true" tabindex="-1">
+      <source src="photo/x32_mixer_3d_loop.mp4" type="video/mp4">
+    </video>
  <div class="wrap hero-inner">
   <button class="hero-music hero-fade" style="--d:.1s" type="button" id="musicBtn"
           aria-label="Включить музыку" aria-pressed="false">
@@ -500,9 +503,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-<script src="script.js?v=20261109-11"></script>
-<script src="stronger-beats.js?v=1"></script>
-<script src="hero-bg.js?v=20261109-8"></script>
+<script src="script.js?v=20261120-1"></script>
 <script src="site-bg.js?v=1"></script>
 </body>
 </html>

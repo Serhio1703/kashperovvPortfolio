@@ -175,7 +175,7 @@
   /* 5. Hero parallax */
   const heroEl = $('#top');
   const heroInnerEl = heroEl && heroEl.querySelector('.hero-inner');
-  const heroCanvasEl = $('#heroCanvas');
+  const heroCanvasEl = $('#heroCanvas') || $('#heroVideo');
   let heroLastY = -1;
   let heroRaf = 0;
 
@@ -208,6 +208,30 @@
       updateHeroParallax(y);
     });
   }
+
+  /* 5b. Видео-фон hero: не крутим видео вне экрана и при reduce-motion */
+  (() => {
+    const video = document.getElementById('heroVideo');
+    if (!video || !heroEl) return;
+
+    if (reduceMotion) { video.pause(); return; }
+
+    const heroVisible = () => {
+      const r = heroEl.getBoundingClientRect();
+      return !document.hidden && r.bottom > 0 && r.top < innerHeight;
+    };
+
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && !document.hidden) video.play().catch(() => {});
+        else video.pause();
+      }, { threshold: 0 }).observe(heroEl);
+    }
+    document.addEventListener('visibilitychange', () => {
+      if (heroVisible()) video.play().catch(() => {});
+      else video.pause();
+    });
+  })();
 
   /* 6. Canvas-утилиты (для карточек работ) */
   const canvasStates = new WeakMap();
@@ -243,7 +267,7 @@
     return { g, w: s.w, h: s.h };
   }
 
-  /* Фон hero теперь рисует hero-bg.js */
+  /* Фон hero — видео x32_mixer_3d_loop.mp4 (см. .hero-video в index.html) */
 
   /* 7. Scroll meter / nav / chain */
   const meter = $('#meter');
